@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
 
+## Install Dependencies
+
+### Prerequisites
+-> Latest `node (version 22.6.0)` should be installed on host system.
+
+### Installing Dependencies
+-> Run `npm install` to install the dependencies (node_modules) required to run the application
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
