@@ -1,0 +1,26 @@
+<div class="products-list">
+  @for (product of products; track product.name) {
+    <div class="products-list-product w-max sm:w-full grid sm:flex justify-between border-2 border-slate-500 p-5 my-5 divide-x divide-black">
+      <div class="grid sm:flex gap-5 divide-x divide-black">
+        <div class="grid gap-5 w-full sm:w-max">
+          <img [src]="product.imageLink!" class="w-1/2 sm:w-24" height="100" width="100" alt="p_img">
+        </div>
+        <div class="grid px-5 items-center">
+          <span><b>Name:</b> {{ product.name }}</span>
+          <span><b>About:</b> {{ product.description }}</span>
+        </div>
+      </div>
+      <div class="grid sm:flex items-center gap-5 divide-x divide-black">
+        <div class="flex sm:grid items-center gap-2 sm:justify-between h-full ml-5 sm:px-5">
+          <span class="font-bold">Price<b class="sm:hidden">:</b></span>
+          <span class="sm:underline">{{ 'Rs. ' + product.price }}</span>
+        </div>
+        <div class="flex gap-4 sm:gap-0 sm:grid items-center px-5 h-full">
+          <!--        <button>Details</button>-->
+          <button class="products-list-product-edit" routerLink="/products/update/{{product.documentID}}">Edit</button>
+          <button class="products-list-product-delete" (click)="openDialog(product.documentID!)">Delete</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

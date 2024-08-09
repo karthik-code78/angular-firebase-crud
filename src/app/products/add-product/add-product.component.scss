@@ -1,0 +1,10 @@
+.add-item {
+  &-holder {
+    overflow: auto;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

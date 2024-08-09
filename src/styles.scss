@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Tailwind imports
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Angular material imports
+@import "@angular/material/prebuilt-themes/azure-blue.css";
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Poppins , "Helvetica Neue", sans-serif !important;
+}
+
+.main-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer-holder {
+  flex-shrink: 0;
+}
+
+
+// global styles
+//.h-85 {
+//  height: 85%;
+//}
+
+.hr-line {
+  background: gray;
+  height: 2px;
+}

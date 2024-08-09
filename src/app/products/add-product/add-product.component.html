@@ -1,0 +1,47 @@
+<h4 class="text-2xl py-4 sm:text-4xl sm:py-6">{{ isEdit ? 'Edit a' : 'Add new' }} Product</h4>
+<hr class="hr-line">
+<div id="add-item-holder" class="add-item-holder pt-6 max-h-60 sm:max-h-80">
+  <ng-form [formGroup]="formGroup" (ngSubmit)="submit()" class="flex flex-col items-start w-1/2">
+    <mat-form-field class="rounded-3xl">
+      <mat-label>Name</mat-label>
+      <input
+        formControlName="name"
+        matInput
+        required
+      />
+      @if (formGroup.get("name")?.invalid) {
+        <mat-error>* Please add a name to the product</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Price</mat-label>
+      <input
+        formControlName="price"
+        matInput
+        required
+      >
+      @if (formGroup.get("price")?.invalid) {
+        <mat-error>* Please assign a price to the product</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field class="w-full">
+      <mat-label>Description</mat-label>
+      <textarea
+        formControlName="description"
+        matInput
+        required
+      ></textarea>
+      @if (formGroup.get("description")?.invalid) {
+        <mat-error>* Please fill in the description</mat-error>
+      }
+    </mat-form-field>
+    @if (imageSrc != null || image != null) {
+      <img [src]="imageSrc" class="h-1/4 w-1/2">
+    }
+    <input class="pt-4" type="file" (change)="setImage($event)" (click)="clearImage($event)">
+<div class="add-item-form-button-holder flex justify-end gap-2 w-full pt-4">
+  <button mat-flat-button (click)="clear()">Clear</button>
+  <button mat-flat-button (click)="submit()">{{ isEdit ? 'Update' : 'Submit' }}</button>
+</div>
+  </ng-form>
+</div>

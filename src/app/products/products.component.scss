@@ -1,0 +1,26 @@
+.products {
+  &-title {
+    //font-size: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px inset;
+    padding: 1rem;
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    border: solid 1px #668ef3;
+    border-radius: 1rem;
+    //padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: white;
+    background: #668ef3;
+    font-weight: bold;
+    //font-size: 2rem;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px inset;
+      //text-decoration: underline 8px;
+      cursor: pointer;
+    }
+  }
+}
